@@ -3,78 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مرامنامه و اساسنامه | حزب رفاه مشترک ایران</title>
+    <title>حزب رفاه مشترک ایران | درگاه رسمی</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { font-family: 'Tahoma', sans-serif; background-color: #f8f9fa; color: #333; line-height: 1.8; }
-        .navbar { background-color: #002d5a; border-bottom: 4px solid #ffd700; }
-        .hero-section { background: linear-gradient(rgba(0,45,90,0.8), rgba(0,45,90,0.8)), url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; color: white; padding: 80px 0; text-align: center; }
-        .section-title { position: relative; padding-bottom: 15px; margin-bottom: 30px; color: #002d5a; font-weight: bold; }
-        .section-title::after { content: ''; position: absolute; bottom: 0; right: 0; width: 60px; height: 4px; background: #ffd700; }
-        .content-card { background: white; border-radius: 15px; padding: 40px; shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 30px; border-top: 5px solid #002d5a; }
-        .goal-item { background: #eef2f7; padding: 15px; border-right: 5px solid #ffd700; margin-bottom: 10px; border-radius: 5px; }
-        footer { background: #111; color: #ccc; padding: 30px 0; margin-top: 50px; }
+        @font-face { font-family: 'Tahoma'; src: local('Tahoma'); }
+        body { font-family: 'Tahoma', sans-serif; scroll-behavior: smooth; background-color: #f8f9fa; }
+        
+        /* منوی بالا */
+        .navbar { background-color: #002d5a; border-bottom: 4px solid #ffd700; position: sticky; top: 0; z-index: 1000; }
+        .nav-link { color: white !important; font-weight: bold; margin: 0 10px; transition: 0.3s; }
+        .nav-link:hover { color: #ffd700 !important; }
+
+        /* صفحه اصلی (Hero) */
+        .hero { 
+            background: linear-gradient(rgba(0,45,90,0.85), rgba(0,45,90,0.85)), url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover; background-position: center;
+            color: white; padding: 150px 0; text-align: center;
+        }
+
+        /* بخش‌های محتوا */
+        section { padding: 80px 0; }
+        .content-card { background: white; border-radius: 15px; padding: 30px; border-top: 5px solid #002d5a; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%; }
+        .section-title { color: #002d5a; font-weight: bold; margin-bottom: 30px; text-align: center; border-bottom: 2px solid #ffd700; display: inline-block; padding-bottom: 10px; }
+        
+        footer { background: #111; color: #ccc; padding: 20px 0; text-align: center; }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="logo.png" alt="Logo" width="45" class="me-2 rounded-circle bg-white p-1">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <img src="logo.png" alt="Logo" width="200" class="me-2 rounded-circle bg-white p-1">
                 حزب رفاه مشترک ایران
             </a>
-            <div class="text-white small d-none d-md-block">درگاه رسمی اطلاع‌رسانی</div>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="#home">صفحه اصلی</a>
+                <a class="nav-link" href="#about">مرامنامه</a>
+                <a class="nav-link" href="#statute">اساسنامه</a>
+                <a class="nav-link" href="#contact">تماس با ما</a>
+            </div>
         </div>
     </nav>
 
-    <header class="hero-section">
+    <header id="home" class="hero">
         <div class="container">
-            <h1 class="display-4 fw-bold">مرامنامه و اساسنامه</h1>
-            <p class="lead">نقشه راه ما برای تحول اقتصادی و اجتماعی ایران</p>
+            <h1 class="display-3 fw-bold mb-4">به درگاه رسمی حزب خوش آمدید</h1>
+            <p class="lead fs-3">تلاش برای ایرانی آزاد، آباد و مرفه برای همه اقشار</p>
+            <a href="#about" class="btn btn-warning btn-lg mt-4 fw-bold">مطالعه مرامنامه</a>
         </div>
     </header>
 
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-lg-8">
+    <section id="about" class="container">
+        <div class="text-center">
+            <h2 class="section-title">مرامنامه حزب</h2>
+        </div>
+        <div class="row g-4 mt-2">
+            <div class="col-md-4">
                 <div class="content-card">
-                    <h2 class="section-title">۱. مرامنامه (اصول فکری)</h2>
-                    <p>حزب رفاه مشترک ایران بر پایه کرامت انسانی و عدالت اقتصادی بنا شده است. ما معتقدیم ثروت ملی باید سفره تمام ایرانیان را پر کند.</p>
-                    
-                    <div class="goal-item"><strong>عدالت رفاهی:</strong> برابری در توزیع فرصت‌ها و ثروت‌های کلان ملی.</div>
-                    <div class="goal-item"><strong>حق درمان:</strong> سلامت یک کالا نیست، بلکه حق طبیعی هر شهروند است.</div>
-                    <div class="goal-item"><strong>شفافیت مطلق:</strong> ریشه‌کنی فساد از طریق نظارت مستقیم مردمی بر بودجه.</div>
-                    <div class="goal-item"><strong>اقتصاد آزاد و مردمی:</strong> حمایت از کارآفرینان در برابر انحصارات دولتی.</div>
-                </div>
-
-                <div class="content-card">
-                    <h2 class="section-title">۲. اساسنامه (قوانین داخلی)</h2>
-                    <p>این بخش شامل قوانین حاکم بر فعالیت‌های حزب و نحوه عضوگیری است:</p>
-                    <ul>
-                        <li><strong>شورای مرکزی:</strong> عالی‌ترین نهاد تصمیم‌گیری که با رای مستقیم اعضا انتخاب می‌شود.</li>
-                        <li><strong>شرایط عضویت:</strong> تمام ایرانیان بالای ۱۸ سال که به قانون اساسی و مرامنامه حزب معتقد باشند.</li>
-                        <li><strong>منابع مالی:</strong> صرفاً از طریق حق عضویت اعضا و کمک‌های مردمی شفاف.</li>
-                    </ul>
+                    <h4>عدالت اقتصادی</h4>
+                    <p>توزیع عادلانه ثروت ملی و مبارزه با رانت‌خواری برای بهبود سفره مردم.</p>
                 </div>
             </div>
-
-            <div class="col-lg-4">
-                <div class="content-card text-center bg-light">
-                    <h4 class="fw-bold mb-4">پیوستن به حزب</h4>
-                    <p>آیا می‌خواهید در تغییر آینده ایران سهمی داشته باشید؟</p>
-                    <button class="btn btn-primary w-100 mb-3 py-2">دریافت فرم عضویت</button>
-                    <hr>
-                    <p class="small text-muted text-end">برای دریافت نسخه PDF اساسنامه کامل، با دبیرخانه تماس بگیرید.</p>
+            <div class="col-md-4">
+                <div class="content-card">
+                    <h4>رفاه عمومی</h4>
+                    <p>دسترسی رایگان به بهداشت و آموزش با کیفیت برای تمامی فرزندان ایران.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="content-card">
+                    <h4>کرامت انسانی</h4>
+                    <p>احترام به حقوق شهروندی و آزادی‌های قانونی تمامی آحاد جامعه.</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section id="statute" class="bg-light">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">اساسنامه حزب</h2>
+            </div>
+            <div class="content-card mt-4">
+                <p><strong>ماده ۱:</strong> حزب رفاه مشترک یک نهاد مردمی و مستقل است.</p>
+                <p><strong>ماده ۲:</strong> تمامی ارکان حزب با رای مستقیم اعضا انتخاب می‌شوند.</p>
+                <p><strong>ماده ۳:</strong> منابع مالی حزب صرفاً از حق عضویت‌ها و کمک‌های داوطلبانه تامین می‌شود.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container text-center">
+        <h2 class="section-title">ارتباط با دبیرخانه</h2>
+        <p class="fs-5">پاسخگوی سوالات و پیشنهادات شما هستیم.</p>
+        <p class="fw-bold">ایمیل: info@party-iran.ir</p>
+    </section>
 
     <footer>
-        <div class="container text-center">
-            <p>© ۲۰۲۶ - حزب رفاه مشترک ایران | خدمت، عدالت، رفاه</p>
-        </div>
+        <p>© ۲۰۲۶ - حزب رفاه مشترک ایران | خدمت به میهن</p>
     </footer>
 
 </body>
