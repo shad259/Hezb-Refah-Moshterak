@@ -20,15 +20,7 @@
         footer { background: #111; color: white; padding: 25px 0; text-align: center; }
     </style>
 </head>
-    <button onclick="checkMember()" class="btn btn-primary">مشاهده سند اعضا</button>
-   function checkMember() {
-    var accessCode = prompt("لطفاً کد عضویت خود را وارد کنید:");
-    if (accessCode === "123456") { // این کد را خودتان تعیین می‌کنید
-        window.open("adalat-refahi.pdf", "_blank");
-    } else {
-        alert("کد وارد شده اشتباه است. لطفا ابتدا عضو حزب شوید.");
-    }
-}
+   
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark shadow">
@@ -301,6 +293,19 @@
         </div>
     </div>
 </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+        function checkMember() {
+            // پیامی که از کاربر کد می‌خواهد
+            var accessCode = prompt("این محتوا مخصوص اعضای حزب است.\nلطفاً کد عضویت خود را وارد کنید:");
+            
+            // کد فرضی شما (مثلاً 1357)
+            if (accessCode === "1357") { 
+                window.open("adalat.pdf", "_blank");
+            } else if (accessCode !== null) { // اگر کاربر کنسل نکرده باشد و کد غلط باشد
+                alert("کد وارد شده اشتباه است. لطفا ابتدا فرم عضویت را پر کنید تا کد برای شما ارسال شود.");
+            }
+        }
+    </script>
+</body>
 </body>
 </html>
