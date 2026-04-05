@@ -20,7 +20,15 @@
         footer { background: #111; color: white; padding: 25px 0; text-align: center; }
     </style>
 </head>
-   
+    <button onclick="checkMember()" class="btn btn-primary">مشاهده سند اعضا</button>
+   function checkMember() {
+    var accessCode = prompt("لطفاً کد عضویت خود را وارد کنید:");
+    if (accessCode === "123456") { // این کد را خودتان تعیین می‌کنید
+        window.open("adalat-refahi.pdf", "_blank");
+    } else {
+        alert("کد وارد شده اشتباه است. لطفا ابتدا عضو حزب شوید.");
+    }
+}
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark shadow">
