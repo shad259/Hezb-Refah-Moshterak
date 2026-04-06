@@ -10,30 +10,36 @@
         .navbar { background-color: #002d5a; border-bottom: 4px solid #ffd700; position: sticky; top: 0; z-index: 1000; }
         .nav-link { color: white !important; font-weight: bold; margin: 0 10px; }
         .hero { 
-            background: linear-gradient(rgba(0,45,90,0.8), rgba(0,45,90,0.8)), url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,45,90,0.85), rgba(0,45,90,0.85)), url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1350&q=80');
             background-size: cover; color: white; padding: 120px 0; text-align: center;
         }
-        section { padding: 70px 0; border-bottom: 1px solid #eee; }
-        .card-custom { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-right: 5px solid #ffd700; }
-        .section-title { color: #002d5a; font-weight: bold; margin-bottom: 35px; text-align: center; }
-        .form-control { border-radius: 10px; padding: 12px; margin-bottom: 15px; }
-        footer { background: #111; color: white; padding: 25px 0; text-align: center; }
+        section { padding: 80px 0; }
+        .card-custom { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-right: 5px solid #ffd700; transition: 0.3s; }
+        .card-custom:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .section-title { color: #002d5a; font-weight: bold; margin-bottom: 40px; text-align: center; position: relative; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: #ffd700; margin: 10px auto; }
+        .modal-header { background-color: #002d5a; color: white; }
+        footer { background: #111; color: white; padding: 30px 0; text-align: center; }
     </style>
 </head>
-   
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark shadow">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#home">
-                <img src="logo.png" alt="Logo" width="200" class="me-2 rounded-circle bg-white p-1">
+                <img src="logo.png" alt="Logo" width="45" class="me-2 rounded-circle bg-white p-1">
                 حزب رفاه مشترک ایران
             </a>
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="#home">صفحه اصلی</a>
-                <a class="nav-link" href="#about">مرامنامه</a>
-                <a class="nav-link" href="#statute">اساسنامه</a>
-                <a class="nav-link" href="#register">عضویت</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="#home">صفحه اصلی</a>
+                    <a class="nav-link" href="#about">مرامنامه</a>
+                    <a class="nav-link" href="#statute">اساسنامه</a>
+                    <a class="nav-link" href="#register">عضویت</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -41,209 +47,95 @@
     <header id="home" class="hero">
         <div class="container">
             <h1 class="display-3 fw-bold">حزب رفاه مشترک ایران</h1>
-            <p class="lead fs-3 mt-3">«حزب رفاه مشترک ایران: تلاش برای آفرینش رفاه عمومی و عدالت پایدار»</p>
-            <a href="#register" class="btn btn-warning btn-lg mt-4 fw-bold">پیوستن به حزب</a>
+            <p class="lead fs-3 mt-3 shadow-sm">عدالت، رفاه و کرامت؛ آرمانی برای هر ایرانی</p>
+            <a href="#about" class="btn btn-warning btn-lg mt-4 fw-bold px-5 py-3">مشاهده برنامه‌های حزب</a>
         </div>
     </header>
 
-    <section id="about" class="container text-center">
-        <h2 class="section-title">اصول بنیادین مرامنامه</h2>
-        <p class="mb-5 text-muted">برای مطالعه جزئیات و برنامه‌های هر اصل، روی دکمه مربوطه کلیک کنید.</p>
-        
+    <section id="about" class="container">
+        <h2 class="section-title">اصول پنج‌گانه مرامنامه</h2>
+        <p class="text-center text-muted mb-5">برای مطالعه تحلیل جامع هر اصل، بر روی دکمه مربوطه کلیک کنید.</p>
         <div class="row g-4">
             <div class="col-md-4">
-                <div class="card-custom h-100">
-                    <h4 class="text-primary fw-bold">۱. عدالت رفاهی</h4>
-                    <p class="small">توزیع عادلانه ثروت ملی و ریشه‌کنی فقر در تمام ایران.</p>
-                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#m1">مطالعه جزئیات</button>
+                <div class="card-custom h-100 text-center">
+                    <h4 class="text-primary fw-bold mb-3">۱. عدالت رفاهی</h4>
+                    <p class="small text-secondary">توزیع عادلانه ثروت ملی و ریشه‌کنی فقر در تمام استان‌های ایران.</p>
+                    <button class="btn btn-outline-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#m1">مطالعه متن جامع</button>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card-custom h-100">
-                    <h4 class="text-primary fw-bold">۲. سلامت رایگان</h4>
-                    <p class="small">تضمین حق درمان باکیفیت و رایگان برای تمامی شهروندان.</p>
-                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#m2">مطالعه جزئیات</button>
+                <div class="card-custom h-100 text-center">
+                    <h4 class="text-primary fw-bold mb-3">۲. سلامت رایگان</h4>
+                    <p class="small text-secondary">تضمین حق درمان باکیفیت و رایگان برای تمامی آحاد جامعه.</p>
+                    <button class="btn btn-outline-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#m2">مطالعه متن جامع</button>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card-custom h-100">
-                    <h4 class="text-primary fw-bold">۳. آموزش نوین</h4>
-                    <p class="small">برابری فرصت‌های آموزشی از مهدکودک تا دانشگاه.</p>
-                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#m3">مطالعه جزئیات</button>
+                <div class="card-custom h-100 text-center">
+                    <h4 class="text-primary fw-bold mb-3">۳. آموزش نوین</h4>
+                    <p class="small text-secondary">برابری فرصت‌های آموزشی و نوسازی مدارس در کل کشور.</p>
+                    <button class="btn btn-outline-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#m3">مطالعه متن جامع</button>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card-custom h-100">
-                    <h4 class="text-primary fw-bold">۴. شفافیت و مبارزه با فساد</h4>
-                    <p class="small">ایجاد اتاق شیشه‌ای برای بودجه و قطع دست رانت‌خواران.</p>
-                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#m4">مطالعه جزئیات</button>
+                <div class="card-custom h-100 text-center border-primary">
+                    <h4 class="text-primary fw-bold mb-3">۴. شفافیت و مبارزه با فساد</h4>
+                    <p class="small text-secondary">ایجاد ساختار شیشه‌ای برای بودجه و قطع رانت‌های اقتصادی.</p>
+                    <button class="btn btn-outline-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#m4">مطالعه متن جامع</button>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card-custom h-100">
-                    <h4 class="text-primary fw-bold">۵. کرامت انسانی</h4>
-                    <p class="small">احترام به حقوق مدنی و صیانت از آزادی‌های قانونی.</p>
-                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#m5">مطالعه جزئیات</button>
+                <div class="card-custom h-100 text-center border-primary">
+                    <h4 class="text-primary fw-bold mb-3">۵. کرامت انسانی</h4>
+                    <p class="small text-secondary">احترام به حقوق مدنی و صیانت از آزادی‌های قانونی شهروندان.</p>
+                    <button class="btn btn-outline-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#m5">مطالعه متن جامع</button>
                 </div>
             </div>
         </div>
     </section>
 
-<div class="modal fade" id="adalat.pdf" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content text-end">
-            <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title">تشریح جامع اصل عدالت رفاهی</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body p-4">
-                <h6 class="fw-bold text-primary">هدف اصلی:</h6>
-                <p>ما معتقدیم ثروت‌های ملی متعلق به تمام نسل‌هاست. عدالت رفاهی یعنی هیچ سفره‌ای در ایران خالی نماند.</p>
-                <hr>
-                <h6 class="fw-bold">محورهای اجرایی:</h6>
-                <ul>
-                    <li class="mb-2"><strong>اصلاح نظام مالیاتی:</strong> معافیت مالیاتی برای اقشار کم‌درآمد و مالیات تصاعدی برای صاحبان ثروت‌های کلان.</li>
-                    <li class="mb-2"><strong>امنیت غذایی:</strong> تضمین کالاهای اساسی با قیمت ثابت برای تمام دهک‌های پایین جامعه.</li>
-                    <li class="mb-2"><strong>مسکن اجتماعی:</strong> استفاده از زمین‌های دولتی برای خانه‌دار کردن جوانان و کارگران.</li>
-                    <li class="mb-2"><strong>توزیع عادلانه یارانه‌ها:</strong> حذف رانت‌های انرژی و پرداخت مستقیم سود منابع ملی به خانواده‌ها.</li>
-                </ul>
-                <div class="alert alert-info mt-3">
-                    این اصل ستون فقرات اقتصادی حزب ماست و تا تحقق کامل آن در تمام استان‌ها، دست از تلاش برنخواهیم داشت.
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن صفحه</button>
-            </div>
-        </div>
-    </div>
-</div>
-    </section>
-
-   <section id="statute" class="bg-light py-5">
+    <section id="statute" class="bg-light">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold text-primary">ساختار و نحوه فعالیت حزب ما</h2>
-                <p class="lead text-muted">شفافیت، رکن اصلی حزب رفاه مشترک ایران است</p>
-            </div>
-
+            <h2 class="section-title">اساسنامه و نحوه فعالیت ما</h2>
             <div class="row g-4">
                 <div class="col-md-6">
-                    <div class="p-4 bg-white shadow-sm rounded-4 h-100 border-start border-primary border-4">
-                        <h4 class="fw-bold text-dark mb-3">🤝 ما کیستیم و چه می‌کنیم؟</h4>
-                        <p class="text-secondary">حزب ما یک تشکل کاملاً مردمی و مستقل است. ما دور هم جمع شده‌ایم تا برای بهتر شدن سفره مردم و برقراری عدالت در توزیع ثروت‌های ملی تلاش کنیم. هیچ وابستگی به گروه‌های خاص نداریم.</p>
+                    <div class="p-4 bg-white shadow-sm rounded-4 border-start border-warning border-4">
+                        <h5 class="fw-bold">ما کیستیم؟</h5>
+                        <p class="small">حزب رفاه مشترک ایران یک تشکل مستقل است که هزینه‌های آن فقط توسط حق عضویت اعضا تامین می‌شود.</p>
                     </div>
                 </div>
-
                 <div class="col-md-6">
-                    <div class="p-4 bg-white shadow-sm rounded-4 h-100 border-start border-primary border-4">
-                        <h4 class="fw-bold text-dark mb-3">🗳️ تصمیمات چگونه گرفته می‌شود؟</h4>
-                        <p class="text-secondary">در حزب ما «رای اعضا» بالاترین قدرت است. تمام مدیران و تصمیم‌گیران حزب با انتخابات مستقیم توسط خودِ اعضا انتخاب می‌شوند. هیچ‌کس بر دیگری برتری ندارد و خرد جمعی حاکم است.</p>
+                    <div class="p-4 bg-white shadow-sm rounded-4 border-start border-warning border-4">
+                        <h5 class="fw-bold">تصمیم‌گیری</h5>
+                        <p class="small">قدرت در دست اعضا است. تمامی مدیران حزب با رای مستقیم و شفاف انتخاب می‌شوند.</p>
                     </div>
                 </div>
-
-                <div class="col-md-6">
-                    <div class="p-4 bg-white shadow-sm rounded-4 h-100 border-start border-primary border-4">
-                        <h4 class="fw-bold text-dark mb-3">💎 بودجه حزب از کجا می‌آید؟</h4>
-                        <p class="text-secondary">ما به شفافیت مالی معتقدیم. هزینه‌های حزب فقط از طریق حق عضویت‌های کوچک اعضا و کمک‌های داوطلبانه شما تامین می‌شود. گزارش تمامی مخارج به صورت شفاف در همین سایت منتشر می‌شود.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="p-4 bg-white shadow-sm rounded-4 h-100 border-start border-primary border-4">
-                        <h4 class="fw-bold text-dark mb-3">🚶 چطور عضو شویم؟</h4>
-                        <p class="text-secondary">هر ایرانی که بالای ۱۸ سال داشته باشد و به آرمان رفاه و عدالت معتقد باشد، می‌تواند عضو شود. کافی است فرم پایین همین صفحه را پر کنید تا همکاران ما با شما تماس بگیرند.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-5 p-3 bg-warning bg-opacity-10 rounded-3 text-center border border-warning">
-                <p class="mb-0 fw-bold text-dark small">⚠️ سوءاستفاده از نام حزب برای منافع شخصی، رانت‌خواری یا فساد مالی خط قرمز ماست و باعث اخراج فوری می‌شود.</p>
             </div>
         </div>
     </section>
 
-   <section id="register" class="py-5 bg-light">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold text-primary">پیوستن به حزب رفاه مشترک</h2>
-            <p class="text-muted">برای دریافت کد عضویت و دسترسی به اسناد راهبردی، فرم زیر را تکمیل کنید.</p>
-        </div>
-
-        <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6">
-                <div class="card shadow-sm border-0 p-4">
-                    <form action="https://formspree.io/f/mlgoaena" method="POST">
-                        
-                        <div class="mb-3">
-                            <label class="form-label fw-bold">نام و نام خانوادگی</label>
-                            <input type="text" name="full_name" class="form-control" placeholder="مثلاً: کاوه کارگر" required>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label fw-bold">( ایمیل آدرس:)</label>
-                            <input type="tel" name="mail" class="form-control" placeholder="abc@ مثلا:" required>
-                        </div>
-                        
-
-                        <div class="mb-3">
-                            <label class="form-label fw-bold">شهر محل سکونت</label>
-                            <input type="text" name="city" class="form-control" placeholder="رشت، تهران و..." required>
-                        </div>
-                         <div class="mb-3">
-                            <label class="form-label fw-bold">شماره تماس (موبایل)</label>
-                            <input type="tel" name="phone" class="form-control" placeholder="+۹۸۹۱۲۰۰۰۰۰ مثلا:" required>
-                        </div>
-                        <input type="hidden" name="_subject" value="درخواست عضویت جدید - سایت حزب">
-
-                        <div class="d-grid gap-2 mt-4">
-                            <button type="submit" class="btn btn-primary btn-lg shadow-sm">ارسال و تایید عضویت</button>
-                        </div>
-                        
-                    </form>
+    <section id="register" class="container">
+        <div class="card-custom p-5 shadow">
+            <h2 class="section-title">پیوستن به حزب</h2>
+            <form action="https://formspree.io/f/mqkvznpq" method="POST">
+                <div class="row g-3">
+                    <div class="col-md-6"><input type="text" name="name" class="form-control" placeholder="نام کامل" required></div>
+                    <div class="col-md-6"><input type="tel" name="phone" class="form-control" placeholder="شماره تماس" required></div>
+                    <div class="col-md-12"><input type="text" name="city" class="form-control" placeholder="شهر" required></div>
+                    <div class="col-md-12 text-center mt-4">
+                        <button type="submit" class="btn btn-primary btn-lg px-5">ارسال درخواست عضویت</button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
-        
-    </div>
-</section>
+    </section>
 
-<div class="modal fade" id="m1" tabindex="-1">
-    <div class="modal-dialog modal-xl h-100"> <div class="modal-content h-75"> <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title fw-bold">سند راهبردی عدالت رفاهی (نسخه PDF)</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body p-0"> <iframe src="adalat.pdf" width="100%" height="500px"></iframe>
-                    
-            </div>
-            <div class="modal-footer">
-                <a href="adalat.pdf" target="_blank" class="btn btn-primary">
-    مشاهده سند عدالت رفاهی
-</a>
-                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">بستن</button>
-            </div>
-        </div>
-    </div>
-</div>
-    <div class="modal fade" id="m2" tabindex="-1 text-end"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">تشریح جامع سلامت رایگان</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body text-end"><h6>برنامه‌ها:</h6><ul><li>بیمه واحد کشوری با پوشش کامل خدمات جراحی و بستری.</li><li>تولید انبوه داروهای حیاتی در داخل کشور.</li><li>ساخت بیمارستان‌های مجهز در نقاط مرزی و محروم.</li></ul></div></div></div></div>
-
-    <div class="modal fade" id="m3" tabindex="-1 text-end"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">تشریح جامع آموزش نوین</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body text-end"><h6>برنامه‌ها:</h6><ul><li>توقف پولی‌سازی آموزش و تقویت مدارس دولتی.</li><li>آموزش مهارت‌های دیجیتال و فنی برای اشتغال جوانان.</li><li>تامین رفاه معلمان به عنوان افسران توسعه کشور.</li></ul></div></div></div></div>
-
-    <div class="modal fade" id="m4" tabindex="-1 text-end"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">شفافیت و مبارزه با فساد</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body text-end"><h6>برنامه‌ها:</h6><ul><li>انتشار عمومی تمام قراردادهای دولتی.</li><li>حذف امضاهای طلایی با هوشمندسازی سیستم اداری.</li><li>حمایت قانونی از گزارش‌گران فساد (سوت‌زنی).</li></ul></div></div></div></div>
-
-    <div class="modal fade" id="m5" tabindex="-1 text-end"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">کرامت انسانی و حقوق مدنی</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body text-end"><h6>برنامه‌ها:</h6><ul><li>صیانت از حریم خصوصی و آزادی بیان.</li><li>رفع تبعیض‌های جنسیتی و قومیتی.</li><li>حق برخورداری از وکیل رایگان و دادگاه‌های علنی.</li></ul></div></div></div></div>
-
-    <footer>
-        <div class="container">
-            <p>© ۲۰۲۶ - حزب رفاه مشترک ایران</p>
-            <small>تلاش برای فردایی روشن‌تر</small>
-        </div>
-    </footer>
- <div class="modal fade" id="m1" tabindex="-1" aria-hidden="true">
+   <div class="modal fade" id="m1" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-scrollable">
         <div class="modal-content text-end">
             <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title fw-bold">سند راهبردی: عدالت رفاهی</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+               <a href="adalat.pdf" target="_blank" class="btn btn-outline-primary btn-sm mt-2">مطالعه فایل جامع (PDF)</a>
             </div>
             <div class="modal-body p-4" style="line-height: 2.2; font-size: 1.1rem;">
                 <h4 class="text-primary border-bottom pb-2">تبیین جامع اصل اول</h4>
@@ -254,19 +146,16 @@
     </div>
 </div>
 
-<div class="modal fade" id="m1" tabindex="-1">
-    <div class="modal-dialog modal-xl h-100"> <div class="modal-content h-75"> <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title fw-bold">سند راهبردی عدالت رفاهی (نسخه PDF)</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+<div class="modal fade" id="m2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content text-end">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title fw-bold">سند راهبردی: سلامت و درمان رایگان</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body p-0"> <iframe src="adalat.pdf" width="100%" height="100%" style="border: none;">
-                    مرورگر شما از نمایش داخلی PDF پشتیبانی نمی‌کند. 
-                    <a href="adalat.pdf">اینجا کلیک کنید تا فایل را دانلود کنید.</a>
-                </iframe>
-            </div>
-            <div class="modal-footer">
-                <a href="adalat.pdf" download class="btn btn-success btn-sm">ذخیره فایل (Download)</a>
-                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">بستن</button>
+            <div class="modal-body p-4" style="line-height: 2.2;">
+                <h4 class="text-primary border-bottom pb-2">تبیین جامع اصل دوم</h4>
+                <p>جزئیات مربوط به بیمه همگانی، ساختار بیمارستان‌ها و تامین دارو در این بخش قرار می‌گیرد...</p>
             </div>
         </div>
     </div>
@@ -316,19 +205,13 @@
         </div>
     </div>
 </div>
-        <script>
-        function checkMember() {
-            // پیامی که از کاربر کد می‌خواهد
-            var accessCode = prompt("این محتوا مخصوص اعضای حزب است.\nلطفاً کد عضویت خود را وارد کنید:");
-            
-            // کد فرضی شما ( 1339)
-            if (accessCode === "1339") { 
-                window.open("adalat.pdf", "_blank");
-            } else if (accessCode !== null) { // اگر کاربر کنسل نکرده باشد و کد غلط باشد
-                alert("کد وارد شده اشتباه است. لطفا ابتدا فرم عضویت را پر کنید تا کد برای شما ارسال شود.");
-            }
-        }
-    </script>
-</body>
+    <footer>
+        <div class="container">
+            <p>© ۲۰۲۶ - حزب رفاه مشترک ایران</p>
+            <small>تلاش برای فردایی روشن‌تر</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
