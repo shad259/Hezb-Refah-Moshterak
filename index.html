@@ -130,62 +130,51 @@
             <h2 class="fw-bold text-primary">پیوستن به حزب رفاه مشترک</h2>
             <p class="text-muted">برای دریافت کد عضویت و دسترسی به اسناد راهبردی، فرم زیر را تکمیل کنید.</p>
         </div>
-<section class="container my-5">
-    <h2 class="text-center mb-4" style="color: #1b5e20;">منشور و ساختار حزب رفاه مشترک</h2>
-    
-    <div class="accordion shadow" id="partyAccordion">
-        
-        <div class="accordion-item" style="background-color: #fdfaf0;">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" style="background-color: #1b5e20; color: #f5f5dc;">
-                    <i class="bi bi-journal-text me-2"></i> مرامنامه و اهداف اصلی حزب
-                </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#partyAccordion">
-                <div class="accordion-body" style="line-height: 2; text-align: justify;">
-                    <h5 style="color: #2e7d32;">مقدمه:</h5>
-                    <p>در اینجا می‌توانید چندین پاراگراف از متن وورد خود را قرار دهید. این بخش قابلیت پذیرش متن‌های بسیار طولانی را دارد و کاربر با اسکرول کردن آن را می‌خواند.</p>
-                    <p>ادامه متن مرامنامه حزب رفاه مشترک ایران برای برقراری عدالت...</p>
+ </section>
+
+  <section id="register" class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-primary">پیوستن به حزب رفاه مشترک</h2>
+            <p class="text-muted">برای دریافت کد عضویت و دسترسی به اسناد راهبردی، فرم زیر را تکمیل کنید.</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-sm border-0 p-4">
+                    <form action="https://formspree.io/f/mlgoaena" method="POST">
+                        
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">نام و نام خانوادگی</label>
+                            <input type="text" name="full_name" class="form-control" placeholder="مثلاً:  کاوه کارگر " required>
+                        </div>
+                        <div class="mb-3">
+                              <label class="form-label fw-bold">ایمیل آدرس:</label> 
+                            <input type="text" name="E-post" class="form-control" placeholder="abc@......" required>
+                            </div>
+                        <div class="mb-3">
+                             
+                            <label class="form-label fw-bold">شماره تماس (موبایل)</label>
+                            <input type="tel" name="phone" class="form-control" placeholder="۹۸۹۱۲۰۰۰۰۰۰+" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">شهر محل سکونت</label>
+                            <input type="text" name="city" class="form-control" placeholder="رشت، تهران و..." required>
+                        </div>
+
+                        <input type="hidden" name="_subject" value="درخواست عضویت جدید - سایت حزب">
+
+                        <div class="d-grid gap-2 mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg shadow-sm">ارسال و تایید عضویت</button>
+                        </div>
+                        
+                    </form>
                 </div>
             </div>
         </div>
-
-        <div class="accordion-item" style="background-color: #fdfaf0;">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" style="background-color: #2e7d32; color: #f5f5dc;">
-                    <i class="bi bi-diagram-3 me-2"></i> ساختار تشکیلاتی (Så funkar vår organisation)
-                </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#partyAccordion">
-                <div class="accordion-body">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item" style="background-color: transparent;"><strong>Medlem:</strong> شرح وظایف و حقوق اعضا در این بخش قرار می‌گیرد.</li>
-                        <li class="list-group-item" style="background-color: transparent;"><strong>Kongressen:</strong> نحوه برگزاری کنگره و تصمیم‌گیری‌ها.</li>
-                        <li class="list-group-item" style="background-color: transparent;"><strong>Arbetarekommunen:</strong> ارتباط با نهادهای کارگری.</li>
-                        <li class="list-group-item" style="background-color: transparent;"><strong>Våra sidoorganisationer:</strong> سازمان‌های جانبی و موازی.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item" style="background-color: #fdfaf0;">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" style="background-color: #1b5e20; color: #f5f5dc;">
-                    <i class="bi bi-shield-check me-2"></i> سند راهبردی عدالت رفاهی
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#partyAccordion">
-                <div class="accordion-body" style="line-height: 1.8;">
-                    <p>تمام آن چندین صفحه متنی که در فایل PDF داشتید را می‌توانید اینجا به صورت پاراگراف‌بندی شده قرار دهید.</p>
-                    <div class="alert alert-warning small">
-                        توجه: بازنشر این محتوا بدون اجازه حزب ممنوع است.
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
-</section></section>
+</section>
 
   <div class="modal fade" id="m1" tabindex="-1">
     <div class="modal-dialog modal-xl h-100"> <div class="modal-content h-75"> <div class="modal-header bg-primary text-white">
