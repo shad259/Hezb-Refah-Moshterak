@@ -38,6 +38,17 @@ function googleTranslateElementInit() {
         .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: #ffd700; margin: 10px auto; }
         .modal-header { background-color: #002d5a; color: #f5f5dc; }
         footer { background: #111; color: #f5f5dc; padding: 30px 0; text-align: center; }
+/* تغییر متن انتخاب زبان گوگل */
+.goog-te-menu-value span:first-child {
+    display: none; /* متن اصلی را مخفی می‌کند */
+}
+
+.goog-te-menu-value:before {
+    content: 'Languages'; /* کلمه مورد نظر شما را جایگزین می‌کند */
+    font-weight: bold;
+    margin-left: 5px;
+}
+        
     </style>
 </head>
 <body>
